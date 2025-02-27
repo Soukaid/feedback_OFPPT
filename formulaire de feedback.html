@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Feedback - OFPPT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="ofppt-logo-B2CAD4E136-seeklogo.com.png" alt="Logo OFPPT">
+                <h1 class="brand-name">OFPPT</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="formulaire de feedback.html" class="nav-link active"><i class="fas fa-comment"></i> Feedback</a></li>
+                    <li><a href="connexion.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Connexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <h2><i class="fas fa-comment-dots"></i> Votre Feedback</h2>
+        <p class="form-description">Votre avis est important pour nous aider à améliorer nos services.</p>
+        
+        <!-- Change this line in the form tag -->
+<form action="submit_feedback.php" method="POST" class="feedback-form" id="feedbackForm">
+            <div class="form-group">
+                <label for="formation"><i class="fas fa-graduation-cap"></i> Qualité de la formation</label>
+                <div class="rating-group">
+                    <div class="rating-option" data-value="excellent">
+                        <i class="fas fa-star"></i>
+                        <span>Excellent</span>
+                    </div>
+                    <div class="rating-option" data-value="bon">
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>Bon</span>
+                    </div>
+                    <div class="rating-option" data-value="moyenne">
+                        <i class="fas fa-star-half"></i>
+                        <span>Moyenne</span>
+                    </div>
+                    <div class="rating-option" data-value="insatisfaisant">
+                        <i class="far fa-star"></i>
+                        <span>Insatisfaisant</span>
+                    </div>
+                </div>
+                <select name="formation" id="formation" required class="hidden-select">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="bon">Bon</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="insatisfaisant">Insatisfaisant</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="enseignant"><i class="fas fa-chalkboard-teacher"></i> Évaluation de l'enseignant</label>
+                <div class="rating-group">
+                    <div class="rating-option" data-value="excellent">
+                        <i class="fas fa-star"></i>
+                        <span>Excellent</span>
+                    </div>
+                    <div class="rating-option" data-value="bon">
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>Bon</span>
+                    </div>
+                    <div class="rating-option" data-value="moyenne">
+                        <i class="fas fa-star-half"></i>
+                        <span>Moyenne</span>
+                    </div>
+                    <div class="rating-option" data-value="insatisfaisant">
+                        <i class="far fa-star"></i>
+                        <span>Insatisfaisant</span>
+                    </div>
+                </div>
+                <select name="enseignant" id="enseignant" required class="hidden-select">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="bon">Bon</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="insatisfaisant">Insatisfaisant</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="infrastructure"><i class="fas fa-building"></i> Évaluation de l'infrastructure</label>
+                <div class="rating-group">
+                    <div class="rating-option" data-value="excellent">
+                        <i class="fas fa-star"></i>
+                        <span>Excellent</span>
+                    </div>
+                    <div class="rating-option" data-value="bon">
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>Bon</span>
+                    </div>
+                    <div class="rating-option" data-value="moyenne">
+                        <i class="fas fa-star-half"></i>
+                        <span>Moyenne</span>
+                    </div>
+                    <div class="rating-option" data-value="insatisfaisant">
+                        <i class="far fa-star"></i>
+                        <span>Insatisfaisant</span>
+                    </div>
+                </div>
+                <select name="infrastructure" id="infrastructure" required class="hidden-select">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="bon">Bon</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="insatisfaisant">Insatisfaisant</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="commentaire"><i class="fas fa-pencil-alt"></i> Commentaires supplémentaires</label>
+                <textarea name="commentaire" id="commentaire" rows="5" placeholder="Partagez vos suggestions pour nous aider à améliorer nos services..."></textarea>
+                <div class="char-count">0/500 caractères</div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Envoyer votre feedback
+            </button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>À propos de l'OFPPT</h3>
+                <p>L'OFPPT s'engage à fournir une formation professionnelle de qualité pour préparer les jeunes au monde du travail.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Formations</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Services</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-phone"></i> +212 5XX-XXXXXX</li>
+                    <li><i class="fas fa-envelope"></i> contact@ofppt.ma</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Casablanca, Maroc</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 OFPPT - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Replace the existing submit event listener with this one
+document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get the selected values
+    const formation = document.getElementById('formation').value;
+    const enseignant = document.getElementById('enseignant').value;
+    const infrastructure = document.getElementById('infrastructure').value;
+    
+    // Validate form
+    if (!formation || !enseignant || !infrastructure) {
+        alert('Veuillez sélectionner une option pour tous les champs obligatoires');
+        return;
+    }
+    
+    // If validation passes, submit the form
+    this.submit();
+});
+
+// Update the rating option click handlers
+document.querySelectorAll('.rating-group').forEach(group => {
+    const select = group.nextElementSibling;
+    const options = group.querySelectorAll('.rating-option');
+    
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            options.forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            select.value = option.dataset.value;
+        });
+    });
+});
+</script>
+</body>
+</html>
